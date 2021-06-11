@@ -1,0 +1,37 @@
+  <section id="add" class="container">
+    <div class="form-wrap">
+      <h1>Add A Doctor</h1>
+      <p>Your contact email will be shared with registered users to apply to your doctor</p>
+      {{#each errors}}
+        <div class = "error">
+        <p>{{text}}</p>>
+        </div>>
+      {{/each}}
+      <form action="/docs/add" method="POST">
+        <div class="input-group">
+          <label for="title">Doctors Title</label>
+          <input type="text" name="title" id="title" class="input-box" placeholder="eg. A doctor for full time"
+            maxlength="100" value={{title}}>
+        </div>
+        <div class="input-group">
+          <label for="specialization">Specialization</label>
+          <input type="text" name="specialization" id="specialization" class="input-box" placeholder="eg. A pediatrician"
+          maxlength="100" value={{specialization}}>
+        </div>
+        <div class="input-group">
+          <label for="budget">Budget (Leave blank for unknown)</label>
+          <input type="number" name="budget" id="budget" class="input-box" placeholder="eg. 500, 5000, 10000" value={{budget}}>
+        </div>
+        <div class="input-group">
+          <label for="description">Position Description</label>
+          <textarea name="description" id="description" class="input-box" placeholder="Describe the details of the position"
+            rows="10">{{description}}</textarea>
+        </div>
+        <div class="input-group">
+          <label for="contact_email">Contact Email</label>
+          <input type="text" name="contact_email" id="contactemail" class="input-box" placeholder="Enter an email" value={{contact_email}}>
+        </div>
+        <input type="submit" value="Add Vacancy" class="btn btn-reverse">
+      </form>
+    </div>
+  </section>

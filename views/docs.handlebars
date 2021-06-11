@@ -1,0 +1,43 @@
+  <section id="docs" class="container">
+    <h1>All Doctors</h1>
+
+{{#each Docs}}
+    <div class="doc">
+      <h3>{{ title }}</h3>
+      <p>{{ description }}</p>
+      <ul>
+        <li>Budget: {{ budget }}</li>
+        <li><a href="mailto:{{ contact_email }}" class="btn btn-reverse">Apply Now</a></li>
+      </ul>
+      <div class="spec">
+        <small>Specialization: <span>{{ specialization }}</span></small>
+      </div>
+    </div>
+{{else}}
+    <p>No doctors in the database</p>
+{{/each}}
+
+    {{!-- <div class="doc">
+      <h3>Looking for an intern</h3>
+      <p>Part time work in medical center!</p>
+      <ul>
+        <li>Budget: 12,000 UAH</li>
+        <li><a href="#" class="btn btn-reverse">Apply Now</a></li>
+      </ul>
+      <div class="Specialization">
+        <small>Specialization: <span>Plastic surgery</span></small>
+      </div>
+    </div>
+
+    <div class="doc">
+      <h3>Looking for a doctor</h3>
+      <p>Part time work in medical centre</p>
+      <ul>
+        <li>Budget: 30,000 UAH</li>
+        <li><a href="#" class="btn btn-reverse">Apply Now</a></li>
+      </ul>
+      <div class="spec">
+        <small>Specialization: <span>Oncologist</span></small>
+      </div>
+    </div> --}}
+  </section>
